@@ -1,7 +1,14 @@
 ##############################
 #### MANIPULATING NUMBERS ####
 ##############################
-#count_to
+def count_to num
+  num = n.to_i
+  if n >= 0
+    (0..n).to_a
+  else
+    0.downto(n).to_a
+  end    
+end
   # takes in a number
   # returns an array containing every integer from 0 to n
   # counts up or down

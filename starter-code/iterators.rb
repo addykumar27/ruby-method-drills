@@ -1,41 +1,69 @@
 ###########################
 #### LOOPS & ITERATORS ####
 ###########################
-#count_spaces
+def count_spaces string
+  count = 0
+  string.each_char do |char|
+    if char == ' '
+       count += 1
+     end
+  end
+  count
+end 
   # takes in a string
   # counts the spaces in a string
   # returns number of spaces
 
-#string_lengths
-  # takes in an array of strings
-  # returns an array containing the lengths of the strings
+def string_lengths array
+    result = []
+    array.each do |num|
+      result.push(num.length)
+    end
+  result 
+end 
+# takes in an array of strings
+# returns an array containing the lengths of the strings
 
-#remove_falsy_values
+def remove_falsy_values list
+    list.select {|object| !!object}
+end
   # takes in a list
   # filters out falsy values from a list
   # returns the updated list
 
-#exclude_last
+def exclude_last sequence
+    sequence[0..-2]   
+end
+
   # takes in an array or string
   # removes the last item from the array or string
   # returns it
 
-#exclude_first
+def exclude_first sequence
+    sequence[1..-1]
+end
   # takes in an array or string
   # removes the first item from an array
   # removes the first character from a string
   # returns a new string - does not alter the original input (non-destructive)
 
-#exclude_ends
+def exclude_ends sequence
+  sequence[1..-2]
+
+end
   # takes in an array or string
   # removes the first and last items from an array
   # removes the first and last characters from a string
 
-#select_every_even
+def select_every_even list
+  list.select.with_index {|item, index| item if index.even? }
+end 
   # takes in an array
   # returns a list of even-indexed items from the input
 
-#select_every_odd
+def select_every_odd list
+  list.select.with_index {|item, index| item if index.odd? }
+end 
   # takes in an array
   # returns a list of odd-indexed items
 

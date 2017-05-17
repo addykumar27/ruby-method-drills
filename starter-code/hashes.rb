@@ -1,7 +1,17 @@
 ##############################
 #### MANIPULATING HASHES ####
 ##############################
-#character_count
+def character_count word
+  letter count={}
+  word.each_letter do |letter|
+  if letter_counts[letter] = 1
+    else
+      letter_counts[letter] += 1
+    end
+  end
+  character_count
+end
+
   # takes in a string
   # counts how many times each character appears in a string
   # ignores case
