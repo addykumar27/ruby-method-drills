@@ -67,13 +67,19 @@ end
   # takes in an array
   # returns a list of odd-indexed items
 
-#select_every_n
+def select_every_n(list, interval=1)
+  list.select.with_index {|item, index| item if index%interval == 0}
+end
   # takes in an array
   # returns a list of items at an index evenly divisible by n
   # defaults to an n value of 1
 
 ## STRETCH ##
-#compile_agenda
+def compile_agenda(agenda_items, order="DESC", bullet="*")
+  sorted_agenda_items = agenda_items.sort_by {|o| o[:priority] }
+  sorted_agenda_items.reverse! if order == "ASC"
+  sorted_agenda_items.map {|o| "#{bullet} #{o[:title]}"  }.join("\n")
+end
   # converts a list of agenda items into a single string
   # titles start with a bullet ("*") and are separated by line breaks ("/n")
   # sorts items by priority ascending (low to high) by default

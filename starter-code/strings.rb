@@ -60,7 +60,7 @@ end
 
 ## STRETCH ##
 def croon char
-  char.split(("")
+  char.split((" ").map {|word| word.split("").join("-")}.join(" ")
 end
   # seperates word characters with dashes
   # preserves whitespace between words
